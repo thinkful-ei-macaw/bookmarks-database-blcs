@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS bookmarks;
 CREATE TYPE rating_num AS ENUM ('1', '2', '3', '4', '5');
 
 CREATE TABLE bookmarks (

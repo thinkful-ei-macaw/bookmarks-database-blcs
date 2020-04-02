@@ -4,6 +4,7 @@ const uuid = require('uuid/v4');
 const { isWebUri } = require('valid-url');
 const logger = require('./logger');
 const store = require('./store');
+const BookMarksService = require('./bookmarks-service');
 
 
 //get and POST will go here
@@ -11,6 +12,13 @@ const store = require('./store');
 const bookmarksRouter = express.Router();
 const bodyParser = express.json();
 
+// const readBookmark = (bookmark) => ({
+//   id: bookmark.id,
+//   title: bookmark.title,
+//   url: bookmark.url,
+//   description: bookmark.description,
+//   rating: parseInt(bookmark.rating)
+// });
 
 bookmarksRouter.route('/bookmarks')
   .get((req, res) => {
